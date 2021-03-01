@@ -3,11 +3,6 @@ const list = document.querySelector(".todo__list");
 const item = document.querySelectorAll(".todo__item");
 
 
-console.log(input);
-console.log(list);
-console.log(item);
-
-
 function addListItem()
 {
     input.addEventListener("keypress", function(event)
@@ -24,7 +19,15 @@ function addListItem()
             else
             {
                 let newItem = createItem(input.value);
+                let button = document.createElement("button");
+                button.innerHTML = "Remove";
+                button.onclick = function()
+                {
+                    button.parentElement.remove()
+                    return;
+                };
                 //list.appendChild(newItem);
+                newItem.appendChild(button);
                 list.insertBefore(newItem, list.childNodes[0]);
                 input.value = "";
 

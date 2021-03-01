@@ -50,7 +50,7 @@ body
 .todo__input
 {
     width: 100%;
-    border: 4px;
+    border-radius: 4px;
     padding: 1rem 1.2rem;
     outline: none;
     border: none;
@@ -60,7 +60,7 @@ body
 .todo__item
 {
     list-style-type: none;
-    padding: 1rem 1.2rem;
+    padding: 1rem 1rem;
     border-bottom: 2px solid coral;
 }
 
@@ -75,4 +75,30 @@ body
     text-decoration: line-through;
     color: rgb(206, 206, 206);
     border-bottom: 2px solid rgb(112, 56, 36);
+}
+
+button
+{
+    border: 0;
+    outline: 0;
+    padding:.2rem;
+    border-radius: 4px;
+    float: right;
+    align-self: center;
+    background-color: coral ;
+    transition: .2s all ease;
+    color: rgb(0, 0, 0);
+
+}
+
+
+button:hover
+{
+    background-color: rgb(226, 112, 71) ;
+    cursor: pointer;
+}
+
+button:active
+{
+    background-color: rgb(214, 105, 65) ;
 }
